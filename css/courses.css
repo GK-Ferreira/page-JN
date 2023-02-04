@@ -1,0 +1,225 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+@keyframes transition {
+    0% {
+        opacity: 0.5;
+        transform: translateX(-300px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+ body {
+    animation: transition 1s;
+} 
+
+header {
+    width: 100%;
+    height: 20vh;
+    background-color: #ff5703;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 5px 15px 20px;
+    border-bottom:2px solid #07940a;
+}
+
+
+header :where(img){
+    display: flex;
+    height: 100%;
+}
+
+
+.navBar :where( .list){
+    display: flex;
+    list-style: none;
+}
+
+.navBar :where(li){
+    margin-right: 20px;
+}
+
+.navBar :where(a){
+    text-decoration: none;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: bolder;
+    padding: 0 30px 10px 0;
+    position: relative;
+}
+
+.item a:hover{
+    color: #07940a;
+}
+
+.item a::after{
+    content: '';
+    width: 0;
+    height: 4px;
+    border-radius: 10px;
+    background-color: #07940a;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    transition: .5s;
+}
+.item a:hover::after{
+    width: 100%;
+}
+
+main {
+    width: 100%;
+    height: 100%;
+    padding-top: 50px;
+    text-align: center;
+    background: green;
+}
+
+main > h1 {
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+}
+
+.cards {
+    display: flex;
+    width: 75%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    padding: 50px 0;
+}
+
+.cards > a {
+    margin-left: 30px;
+    margin-bottom: 30px;
+}
+
+.card {
+    background-size: cover;
+}
+
+.info {background-image: url('../images/info-logo.png'); background-position: left;}
+
+.enfer {background-image: url('../images/enfer-logo.png');background-position: right;}
+
+.hosp {background-image: url('../images/hospedagem-logo.png');background-position: center;}
+
+.st {background-image: url('../images/st-logo.png');background-position: center;}
+
+.libras {background-image: url('../images/libras-logo.png'); background-position: center;}
+
+.nada {display: hidden;}
+
+
+.card {
+    width: 300px;
+    height: 350px;
+    opacity: 0.6;
+    transition: .5s all ease-in-out;
+    text-decoration: none;
+}
+
+ .title {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   margin-top: 300px;
+   background: rgb(248, 248, 248);
+   color: black;
+   height: 50px;
+   font-size: 1.4rem;
+   text-align: center;
+   
+}
+
+.card:hover{
+    scale: 1.1;
+    opacity: 1;
+    cursor: pointer;
+}
+
+.footer {
+    padding: 5em;
+    background-color: #ff5703;
+    color: #fff;
+    font-family: Helvetica, sans-serif;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.left {
+    margin-left: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    text-align: center;
+}
+
+.left :where(ul,li){
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+.left :where(li){
+    font-size: 1.3rem;    
+    margin: 0 1em;
+}
+
+.social_list li:hover{
+    color:#07940a;
+}
+.social_list i{
+    font-size: 1.5em;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.left > p {
+    margin-top: 2em;
+}
+
+.right{
+    position: absolute;
+    right: 10em;
+    border-left: 3px solid #fff;
+    padding-left: 20px;
+    height: 125px;
+}
+
+.right > h3 {
+    margin-bottom: 10px;
+    opacity: .7;
+    transition: .3s all ease-in-out;
+}
+
+.right > h3:hover{
+    opacity: 1;
+    cursor: pointer;
+}
+
+.right > ul {
+    list-style: none;
+}
+
+.right :where(li) {
+    margin-bottom: 12px;
+    font-weight: 700;
+    opacity: .7;
+    transition: .3s all ease-in-out;
+}
+
+.right :where(li):hover{
+    opacity: 1;
+    cursor: pointer;
+}
